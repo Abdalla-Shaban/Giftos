@@ -28,7 +28,7 @@ function Card(props) {
       </div>
       <button
         onClick={() => {
-          if(auth.user.username) {
+          if(auth.user) {
             addProductToCart(product)
           }else {
             navigate("/bag")

@@ -7,10 +7,9 @@ import { CartContext } from "../context/CartContext";
 function Bag() {
   const auth = useAuth();
   const { cartItems } = useContext(CartContext);
-  // console.log(auth.user.username);
   return (
     <div className="py-20">
-      {!auth.user.username ? (
+      {!auth.user ? (
         <div className="flex-1 text-3xl md:text-4xl text-center">
           Yon Need To Login First... <br />{" "}
           <Link
@@ -35,7 +34,7 @@ function Bag() {
           )}
         </>
       )}
-      {cartItems.length > 0 && <CartItems />}
+      {cartItems.length > 0 && <>{auth.user && <CartItems />}</>}
     </div>
   );
 }

@@ -10,7 +10,7 @@ function Navbar() {
   const navigate = useNavigate();
   const handleLogout = () => {
     auth.logout();
-    navigate("/")
+    navigate("/");
   };
   return (
     <nav>
@@ -71,7 +71,11 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={() => setClose(true)} className=" p-2 uppercase rounded" to="/contact-us">
+            <NavLink
+              onClick={() => setClose(true)}
+              className=" p-2 uppercase rounded"
+              to="/contact-us"
+            >
               Contact us
             </NavLink>
           </li>
@@ -79,7 +83,7 @@ function Navbar() {
         <div className="user-info md:px-0">
           <ul className="md:flex items-center gap-4">
             <li>
-              {!auth.user.username ? (
+              {!auth.user ? (
                 <NavLink
                   onClick={() => setClose(true)}
                   to="/login"
@@ -112,7 +116,16 @@ function Navbar() {
                 to="/bag"
               >
                 <FaBagShopping />
-                Bag {cartItems.length > 0 && <span className="absolute -top-2 right-0 text-white font-bold flex justify-center items-center w-[20px] h-[20px] bg-[#f89cab] rounded-full">{cartItems.length}</span>}
+                Bag{" "}
+                {cartItems.length > 0 && (
+                  <>
+                    {auth.user && (
+                      <span className="absolute -top-2 right-0 text-white font-bold flex justify-center items-center w-[20px] h-[20px] bg-[#f89cab] rounded-full">
+                        {cartItems.length}
+                      </span>
+                    )}
+                  </>
+                )}
               </NavLink>
             </li>
           </ul>
