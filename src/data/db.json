@@ -1,0 +1,77 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Ring",
+            "price": 200,
+            "image": "./images/p1.png",
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "title": "Watch",
+            "price": 300,
+            "image": "./images/p2.png",
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "title": "Teaddy Bear",
+            "price": 110,
+            "image": "./images/p3.png",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "title": "Flower Bouquet",
+            "price": 45,
+            "image": "./images/p4.png",
+            "quantity": 1
+        },
+        {
+            "id": 5,
+            "title": "Teaddy Bear",
+            "price": 95,
+            "image": "./images/p5.png",
+            "quantity": 1
+        },
+        {
+            "id": 6,
+            "title": "Flower Bouquet",
+            "price": 70,
+            "image": "./images/p6.png",
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "title": "Watch",
+            "price": 400,
+            "image": "./images/p7.png",
+            "quantity": 1
+        },
+        {
+            "id": 8,
+            "title": "Ring",
+            "price": 450,
+            "image": "./images/p8.png",
+            "quantity": 1
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "username": "abdalla",
+            "password": "123"
+        },
+        {
+            "id": 3,
+            "username": "abdalla2",
+            "password": "12345678"
+        }
+    ]
+}
