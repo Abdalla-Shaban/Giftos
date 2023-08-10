@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Bag from "./pages/Bag";
 import AuthProvider from "./components/Auth";
-import Profile from "./components/Profile";
+import Profile from "./pages/Profile";
 import ProductsProvider from "./context/ProductsContext";
 import CartProvider from "./context/CartContext";
 
