@@ -1,15 +1,9 @@
-import { createContext, useEffect, useState } from "react";
-
+import { createContext } from "react";
+import data from "../data/db.json"
 export const ProductsContext = createContext({});
 function ProductsProvider({ children }) {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:9000/products")
-      .then((response) => response.json())
-      .then((products) => setProducts(products));
-  }, []);
   return (
-    <ProductsContext.Provider value={products}>
+    <ProductsContext.Provider value={data.products}>
       {children}
     </ProductsContext.Provider>
   );
