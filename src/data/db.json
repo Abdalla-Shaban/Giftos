@@ -62,16 +62,6 @@
             "id": 1,
             "username": "admin",
             "password": "123456"
-        },
-        {
-            "id": 2,
-            "username": "abdalla",
-            "password": "123"
-        },
-        {
-            "id": 3,
-            "username": "abdalla2",
-            "password": "12345678"
         }
     ]
 }
