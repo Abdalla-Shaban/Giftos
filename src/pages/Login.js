@@ -1,37 +1,56 @@
+// import axios from "axios";
 import { useState } from "react";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../components/Auth";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import data from "../data/db.json";
 
 function Login() {
   const MySwal = withReactContent(Swal);
+  const adminUsername = data.users[0].username;
+  const adminPassword = data.users[0].password;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const auth = useAuth();
   const navigate = useNavigate();
-  const handleLogin = async () => {
-    const credentials = { username, password };
-    try {
-      const response = await axios.post(
-        "http://localhost:3001/login",
-        credentials
-      );
-      console.log(response.data);
-      auth.login(credentials);
+
+  const handleLogin = () => {
+    if (adminUsername === username && adminPassword === password) {
+      auth.login(username);
       navigate("/profile");
-    } catch (err) {
-      console.log(err);
+    } else {
       MySwal.fire({
         title: "Login Error!",
-        text: `wrong ${err.message}`,
+        text: `invalid username or password`,
         icon: "error",
         confirmButtonText: "try again",
       });
     }
   };
-
+  // ==== Test For Back End ====
+  // ===========================
+  // const handleLogin = async () => {
+  //   const credentials = { username, password };
+  //   try {
+  //     const response = await axios.post(
+  //       "http://localhost:3001/login",
+  //       credentials
+  //     );
+  //     console.log(response.data);
+  //     auth.login(credentials);
+  //     navigate("/profile");
+  //   } catch (err) {
+  //     console.log(err);
+  //     MySwal.fire({
+  //       title: "Login Error!",
+  //       text: `wrong ${err.message}`,
+  //       icon: "error",
+  //       confirmButtonText: "try again",
+  //     });
+  //   }
+  // };
+  // ===========================
   return (
     <form className="mt-10 px-10 md:px-20 py-16 min-w-[350px] md:w-[600px] mx-auto rounded bg-[#f9ece6]">
       <h1 className="text-5xl text-center font-bold mb-8">Login</h1>
