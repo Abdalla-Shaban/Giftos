@@ -39,6 +39,6 @@ button {
     @apply bg-[#f90cab] z-10
 }
 table , th, tr, td{
-    border: 2px solid #f78cab;
     padding: 10px;
+    border: 2px solid #f78cab;
 }

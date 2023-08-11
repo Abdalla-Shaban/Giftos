@@ -101,7 +101,10 @@ function Navbar() {
                     <FaUser /> Profile
                   </NavLink>
                   <button
-                    onClick={handleLogout}
+                    onClick={() => {
+                      handleLogout();
+                       setClose(true);
+                    }}
                     className="p-2 bg-red-600 text-white font-semibold rounded"
                   >
                     Logout

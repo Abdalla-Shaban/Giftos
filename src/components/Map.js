@@ -24,7 +24,7 @@ function Map() {
   });
   return (
     <MapContainer
-      className="flex-1 min-w-[350px] min-h-[350px]"
+      className="flex-1 md:min-w-[350px] min-h-[350px]"
       center={position}
       zoom={13}
       scrollWheelZoom={false}

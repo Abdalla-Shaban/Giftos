@@ -16,7 +16,7 @@ import CartProvider from "./context/CartContext";
 
 function App() {
   return (
-    <main className="px-5 md:px-20">
+    <main className="px-2 md:px-20">
       <AuthProvider>
         <ProductsProvider>
           <CartProvider>

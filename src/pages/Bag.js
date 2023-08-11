@@ -8,7 +8,7 @@ function Bag() {
   const auth = useAuth();
   const { cartItems } = useContext(CartContext);
   return (
-    <div className="py-20">
+    <div className="py-20 overflow-hidden">
       {!auth.user ? (
         <div className="flex-1 text-3xl md:text-4xl text-center">
           Yon Need To Login First... <br />{" "}
